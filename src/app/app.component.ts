@@ -10,7 +10,7 @@ import ObservorPattern from './shareded/observerpattern';
 export class AppComponent {
   title = 'designpatternofoops';
   constructor() {
-    strategyPattern();
-    ObservorPattern();
+    // strategyPattern();
+    // ObservorPattern();
   }
 }
