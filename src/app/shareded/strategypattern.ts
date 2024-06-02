@@ -17,13 +17,16 @@ class CantFly implements FLY {
 }
 
 class Animal {
-    private fly: FLY;
-    constructor( fly: FLY) {
-        this.fly = fly;
+    private fly!: FLY;
+    constructor() {
     }
 
     tryToFly() {
         return this.fly.fly();
+    }
+
+    setflyType(fly: FLY) {
+        this.fly = fly;
     }
 }
 
@@ -33,9 +36,11 @@ class Animal {
 
 export default function strategyPattern() {
 
-    const animal = new Animal(new CanFly());
+    const animal = new Animal();
+    animal.setflyType(new CanFly());
     console.log('animal', animal.tryToFly());
 
-    const animal2 = new Animal(new CantFly());
+    const animal2 = new Animal();
+    animal.setflyType(new CantFly());
     console.log('animal', animal2.tryToFly())
 }
