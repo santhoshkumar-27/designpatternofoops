@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import strategyPattern from './shareded/strategypattern';
+import ObservorPattern from './shareded/observerpattern';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import strategyPattern from './shareded/strategypattern';
 export class AppComponent {
   title = 'designpatternofoops';
   constructor() {
-    strategyPattern()
+    strategyPattern();
+    ObservorPattern();
   }
 }
