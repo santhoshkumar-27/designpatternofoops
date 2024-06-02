@@ -22,7 +22,16 @@ class Subject {
 }
 
 class Observor implements Observer {
-    id = new Date().getTime();
+    static incrementor = 0;
+    id: number = 0;
+
+    constructor() {
+        Observor.incrementor++
+
+        this.id = Observor.incrementor;
+
+        console.log('id', this.id)
+    }
 
     update<T>(value: T) {
         console.log('value', value)
