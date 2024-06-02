@@ -1,3 +1,5 @@
+import { interval, tap, timer } from "rxjs";
+
 interface Observer {
     update<T>(value: T): void;
     id: number;
@@ -62,6 +64,16 @@ export default function ObservorPattern() {
     subject1.unRegister(observor2);
 
     subject1.notifyUpdate('something removed');
+
+
+    // mimiking the thread like structure
+    interval(3000).pipe(
+        tap((res) => {
+            subject1.notifyUpdate(res);
+        }, (err: any) => {
+
+        })
+    ).subscribe()
 
 
 }
