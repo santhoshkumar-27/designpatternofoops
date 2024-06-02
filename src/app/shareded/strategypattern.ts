@@ -41,6 +41,6 @@ export default function strategyPattern() {
     console.log('animal', animal.tryToFly());
 
     const animal2 = new Animal();
-    animal.setflyType(new CantFly());
+    animal2.setflyType(new CantFly());
     console.log('animal', animal2.tryToFly())
 }
