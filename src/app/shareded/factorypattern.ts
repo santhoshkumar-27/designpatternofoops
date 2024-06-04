@@ -99,3 +99,5 @@ export default function factoryPattern() {
 
     runInstance(enemyShip);
 }
+
+// abstract class or concrete class
