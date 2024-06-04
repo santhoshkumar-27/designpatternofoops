@@ -1,3 +1,4 @@
+export type enemyType = 'U' | 'R' | 'B'
 abstract class EnemyShip {
 
     private name!: string;
@@ -32,6 +33,14 @@ class UFOEnemyShip extends EnemyShip {
     }
 }
 
+class BigEnemyShip extends EnemyShip {
+    constructor() {
+        super();
+        this.setName('Big UFO fighter');
+        this.setDamage(50.00)
+    }
+}
+
 class RocketEnemyShip extends EnemyShip {
     constructor() {
         super();
@@ -40,6 +49,22 @@ class RocketEnemyShip extends EnemyShip {
     }
 }
 
+class EnemyShipFactory {
+
+    makeEnemyShip(type: enemyType) {
+        let enemyShip: EnemyShip;
+
+        if (type == 'U') {
+            enemyShip = new UFOEnemyShip();
+        } else if (type === 'B') {
+            enemyShip = new BigEnemyShip();
+        } else {
+            enemyShip = new RocketEnemyShip();
+        }
+
+        return enemyShip;
+    }
+}
 
 function runInstance(enemyShip: EnemyShip) {
 
@@ -49,19 +74,28 @@ function runInstance(enemyShip: EnemyShip) {
 }
 
 export default function factoryPattern() {
-    const enemyType: 'U' | 'R' = 'U';
+    const enemyType: enemyType = 'U';
 
-    let enemyShip: EnemyShip;
+    const enemyShipFactory = new EnemyShipFactory();
 
-    if (enemyType == 'U') {
-        console.log('enemyType', enemyType)
-        enemyShip = new UFOEnemyShip();
-    } else {
-        enemyShip = new RocketEnemyShip();
-    }
+    const enemyShip: EnemyShip = enemyShipFactory.makeEnemyShip(enemyType);
 
-    if (!enemyShip) {
-        return null;
-    }
+    // now we centraliszed the object creation so we don't modify or add new class
+
+    // const enemyType: 'U' | 'R' = 'U';
+
+    // let enemyShip: EnemyShip;
+
+    // if (enemyType == 'U') {
+    //     console.log('enemyType', enemyType)
+    //     enemyShip = new UFOEnemyShip();
+    // } else {
+    //     enemyShip = new RocketEnemyShip();
+    // }
+
+    // if (!enemyShip) {
+    //     return null;
+    // }
+
     runInstance(enemyShip);
 }
