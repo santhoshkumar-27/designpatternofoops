@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import strategyPattern from './shareded/strategypattern';
 import ObservorPattern from './shareded/observerpattern';
+import factoryPattern from './shareded/factorypattern';
 
 @Component({
   selector: 'app-root',
@@ -12,5 +13,6 @@ export class AppComponent {
   constructor() {
     // strategyPattern();
     // ObservorPattern();
+    factoryPattern()
   }
 }

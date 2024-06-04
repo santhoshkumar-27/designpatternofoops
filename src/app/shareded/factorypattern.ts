@@ -24,7 +24,7 @@ abstract class EnemyShip {
 }
 
 
-class UFOEnimyShip extends EnemyShip {
+class UFOEnemyShip extends EnemyShip {
     constructor() {
         super();
         this.setName('UFO fighter');
@@ -32,10 +32,36 @@ class UFOEnimyShip extends EnemyShip {
     }
 }
 
-class RocketEnimyShip extends EnemyShip {
+class RocketEnemyShip extends EnemyShip {
     constructor() {
         super();
         this.setName('Rocket');
         this.setDamage(200)
     }
+}
+
+
+function runInstance(enemyShip: EnemyShip) {
+
+    enemyShip.displayEnemyShip();
+    enemyShip.followHeroShip();
+    enemyShip.enemyShipShoots()
+}
+
+export default function factoryPattern() {
+    const enemyType: 'U' | 'R' = 'U';
+
+    let enemyShip: EnemyShip;
+
+    if (enemyType == 'U') {
+        console.log('enemyType', enemyType)
+        enemyShip = new UFOEnemyShip();
+    } else {
+        enemyShip = new RocketEnemyShip();
+    }
+
+    if (!enemyShip) {
+        return null;
+    }
+    runInstance(enemyShip);
 }
