@@ -59,13 +59,13 @@ abstract class EnemyShipBuilding {
     // The specific parts used for engine & weapon depend
     // upon the String that is passed to this method
 
-    protected abstract makeEnemyShip(typeOfShip: string): EnemyShip;
+    protected abstract makeEnemyShip(typeOfShip: enemyShipType): EnemyShip;
 
     // When called a new EnemyShip is made. The specific parts
     // are based on the String entered. After the ship is made
     // we execute multiple methods in the EnemyShip Object
 
-    public orderTheShip(typeOfShip: string): EnemyShip {
+    public orderTheShip(typeOfShip: enemyShipType): EnemyShip {
         const theEnemyShip: EnemyShip = this.makeEnemyShip(typeOfShip);
 
         theEnemyShip.makeShip();
@@ -272,9 +272,9 @@ class UFOBossEnemyShip extends EnemyShip {
 export function abstractFactory() {
     const MakeUFOs: EnemyShipBuilding = new UFOEnemyShipBuilding();
 
-    const theGrunt: EnemyShip = MakeUFOs.orderTheShip("UFO");
+    const theGrunt: EnemyShip = MakeUFOs.orderTheShip("U");
     console.log(theGrunt + "\n");
 
-    const theBoss: EnemyShip = MakeUFOs.orderTheShip("UFO BOSS");
+    const theBoss: EnemyShip = MakeUFOs.orderTheShip("B");
     console.log(theBoss + "\n");
 }
