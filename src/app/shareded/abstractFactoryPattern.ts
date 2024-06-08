@@ -1,4 +1,4 @@
-import { enemyType } from "./factorypattern";
+import { enemyShipType } from "./factorypattern";
 
 interface ESWeapon {
 
@@ -100,7 +100,7 @@ abstract class EnemyShipBuilding {
 
 class UFOEnemyShipBuilding extends EnemyShipBuilding {
 
-    protected makeEnemyShip(typeOfShip: enemyType): EnemyShip {
+    protected makeEnemyShip(typeOfShip: enemyShipType): EnemyShip {
         let theEnemyShip!: EnemyShip;
 
         // If UFO was sent grab use the factory that knows
@@ -129,13 +129,13 @@ class UFOEnemyShipFactory implements EnemyShipFactory{
 
 	// Defines the weapon object to associate with the ship
 	
-	public ESWeapon addESGun() {
+	public  addESGun(): ESWeapon {
 		return new ESUFOGun(); // Specific to regular UFO
 	}
 
 	// Defines the engine object to associate with the ship
 	
-	public ESEngine addESEngine() {
+	public  addESEngine(): ESEngine {
 		return new ESUFOEngine(); // Specific to regular UFO
 	}
 }
@@ -144,13 +144,13 @@ class UFOBossEnemyShipFactory implements EnemyShipFactory{
 
 	// Defines the weapon object to associate with the ship
 	
-	public ESWeapon addESGun() {
+	public  addESGun(): ESWeapon {
 		return new ESUFOBossGun(); // Specific to Boss UFO
 	}
 
 	// Defines the engine object to associate with the ship
 	
-	public ESEngine addESEngine() {
+	public  addESEngine(): ESEngine {
 		return new ESUFOBossEngine(); // Specific to Boss UFO
 	}
 
