@@ -15,6 +15,6 @@ export class AppComponent {
     // strategyPattern();
     // ObservorPattern();
     // factoryPattern()
-    abstractFactory()
+    // abstractFactory()
   }
 }
