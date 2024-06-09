@@ -269,7 +269,7 @@ class UFOBossEnemyShip extends EnemyShip {
 
 
 
-export function abstractFactory() {
+export default function abstractFactory() {
     const MakeUFOs: EnemyShipBuilding = new UFOEnemyShipBuilding();
 
     const theGrunt: EnemyShip = MakeUFOs.orderTheShip("U");

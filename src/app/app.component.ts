@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import strategyPattern from './designPatterns/creationalPatterns/strategypattern';
 import ObservorPattern from './designPatterns/BehaviouralPatterns/observerpattern';
+import abstractFactory from './designPatterns/creationalPatterns/abstractFactoryPattern';
 import factoryPattern from './designPatterns/creationalPatterns/factorypattern';
-import { abstractFactory } from './designPatterns/creationalPatterns/abstractFactoryPattern';
+import strategyPattern from './designPatterns/creationalPatterns/strategypattern';
+
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,9 @@ import { abstractFactory } from './designPatterns/creationalPatterns/abstractFac
 export class AppComponent {
   title = 'designpatternofoops';
   constructor() {
-    // strategyPattern();
-    // ObservorPattern();
-    // factoryPattern()
-    // abstractFactory()
+    ObservorPattern();
+    strategyPattern();
+    factoryPattern()
+    abstractFactory()
   }
 }
