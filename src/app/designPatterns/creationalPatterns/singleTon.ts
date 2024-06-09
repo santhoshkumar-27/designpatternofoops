@@ -62,7 +62,17 @@ class Singleton {
      */
 
     public getLetterList() {
-        return this.scrabbleLetters
+        return Singleton.#instance.scrabbleLetters
+    }
+
+
+    public getTiles(numberOftiles: number): string[] {
+        const newLists = [];
+
+        for (let i = 0; i <= numberOftiles; i++) {
+            newLists.push(...(this.getLetterList().splice(0, 1) as string[]))
+        }
+        return newLists;
     }
 }
 
@@ -70,15 +80,27 @@ class Singleton {
  * The client code.
  */
 export default function singleton() {
-    const s1 = Singleton.instance;
-    const s2 = Singleton.instance;
+    const s1: Singleton = Singleton.instance;
+    const s2: Singleton = Singleton.instance;
 
-    if (s1 === s2) {
-        console.log(
-            'Singleton works, both variables contain the same instance.'
-        );
-    } else {
-        console.log('Singleton failed, variables contain different instances.');
-    }
+    // if (s1 === s2) {
+    //     console.log(
+    //         'Singleton works, both variables contain the same instance.'
+    //     );
+    // } else {
+    //     console.log('Singleton failed, variables contain different instances.');
+    // }
+
+    console.log('Letters lists', s1.getLetterList())
+
+    const playerOne = s1.getTiles(5);
+
+    console.log('player one', playerOne)
+
+    console.log('Letters lists', s2.getLetterList())
+
+    const playerTwo = s2.getTiles(8);
+
+    console.log('player Two', playerTwo)
 }
 
