@@ -275,6 +275,6 @@ export function abstractFactory() {
     const theGrunt: EnemyShip = MakeUFOs.orderTheShip("U");
     console.log(theGrunt + "\n");
 
-    const theBoss: EnemyShip = MakeUFOs.orderTheShip("B");
-    console.log(theBoss + "\n");
+    // const theBoss: EnemyShip = MakeUFOs.orderTheShip("B");
+    // console.log(theBoss + "\n");
 }
