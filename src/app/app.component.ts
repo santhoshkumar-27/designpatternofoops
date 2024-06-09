@@ -15,13 +15,13 @@ export class AppComponent {
   title = 'designpatternofoops';
   constructor() {
     // creational patterns
-    strategyPattern();
-    factoryPattern()
-    abstractFactory()
+    // strategyPattern();
+    // factoryPattern()
+    // abstractFactory()
     singleton();
 
     // Behavioural Patterns
-    ObservorPattern();
+    // ObservorPattern();
 
   }
 }
