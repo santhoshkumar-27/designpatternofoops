@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import strategyPattern from './shareded/strategypattern';
-import ObservorPattern from './shareded/observerpattern';
-import factoryPattern from './shareded/factorypattern';
-import { abstractFactory } from './shareded/abstractFactoryPattern';
+import strategyPattern from './designPatterns/creationalPatterns/strategypattern';
+import ObservorPattern from './designPatterns/BehaviouralPatterns/observerpattern';
+import factoryPattern from './designPatterns/creationalPatterns/factorypattern';
+import { abstractFactory } from './designPatterns/creationalPatterns/abstractFactoryPattern';
 
 @Component({
   selector: 'app-root',
