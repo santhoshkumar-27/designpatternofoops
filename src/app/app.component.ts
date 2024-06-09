@@ -3,6 +3,7 @@ import ObservorPattern from './designPatterns/BehaviouralPatterns/observerpatter
 import abstractFactory from './designPatterns/creationalPatterns/abstractFactoryPattern';
 import factoryPattern from './designPatterns/creationalPatterns/factorypattern';
 import strategyPattern from './designPatterns/creationalPatterns/strategypattern';
+import singleton from './designPatterns/creationalPatterns/singleTon';
 
 
 @Component({
@@ -13,9 +14,14 @@ import strategyPattern from './designPatterns/creationalPatterns/strategypattern
 export class AppComponent {
   title = 'designpatternofoops';
   constructor() {
-    ObservorPattern();
+    // creational patterns
     strategyPattern();
     factoryPattern()
     abstractFactory()
+    singleton();
+
+    // Behavioural Patterns
+    ObservorPattern();
+
   }
 }
