@@ -121,3 +121,34 @@ class RobotEngineer {
     }
 
 }
+
+
+export default function builderPattern() {
+    // Get a RobotBuilder of type OldRobotBuilder
+
+    const oldStyleRobot: RobotBuilder = new OldRobotBuilder();
+
+    // Pass the OldRobotBuilder specification to the engineer
+
+    const robotEngineer: RobotEngineer = new RobotEngineer(oldStyleRobot);
+
+    // Tell the engineer to make the Robot using the specifications
+    // of the OldRobotBuilder class
+
+    robotEngineer.makeRobot();
+
+    // The engineer returns the right robot based off of the spec
+    // sent to it on line 11
+
+    const firstRobot: Robot = robotEngineer.getRobot();
+
+    console.log("Robot Built");
+
+    console.log("Robot Head Type: " + firstRobot.getRobotHead());
+
+    console.log("Robot Torso Type: " + firstRobot.getRobotTorso());
+
+    console.log("Robot Arm Type: " + firstRobot.getRobotArms());
+
+    console.log("Robot Leg Type: " + firstRobot.getRobotLegs());
+}

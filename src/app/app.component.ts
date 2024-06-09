@@ -4,6 +4,7 @@ import abstractFactory from './designPatterns/creationalPatterns/abstractFactory
 import factoryPattern from './designPatterns/creationalPatterns/factorypattern';
 import strategyPattern from './designPatterns/creationalPatterns/strategypattern';
 import singleton from './designPatterns/creationalPatterns/singleTon';
+import builderPattern from './designPatterns/creationalPatterns/builderPattern';
 
 
 @Component({
@@ -18,7 +19,8 @@ export class AppComponent {
     // strategyPattern();
     // factoryPattern()
     // abstractFactory()
-    singleton();
+    // singleton();
+    builderPattern();
 
     // Behavioural Patterns
     // ObservorPattern();
