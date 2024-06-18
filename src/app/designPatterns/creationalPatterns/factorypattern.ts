@@ -1,4 +1,4 @@
-export type enemyType = 'U' | 'R' | 'B'
+export type enemyShipType = 'U' | 'R' | 'B'
 abstract class EnemyShip {
 
     private name!: string;
@@ -51,7 +51,7 @@ class RocketEnemyShip extends EnemyShip {
 
 class EnemyShipFactory {
 
-    makeEnemyShip(type: enemyType) {
+    makeEnemyShip(type: enemyShipType) {
         let enemyShip: EnemyShip;
 
         if (type == 'U') {
@@ -74,7 +74,7 @@ function runInstance(enemyShip: EnemyShip) {
 }
 
 export default function factoryPattern() {
-    const enemyType: enemyType = 'U';
+    const enemyType: enemyShipType = 'U';
 
     const enemyShipFactory = new EnemyShipFactory();
 

@@ -1,7 +1,11 @@
 import { Component } from '@angular/core';
-import strategyPattern from './shareded/strategypattern';
-import ObservorPattern from './shareded/observerpattern';
-import factoryPattern from './shareded/factorypattern';
+import ObservorPattern from './designPatterns/BehaviouralPatterns/observerpattern';
+import abstractFactory from './designPatterns/creationalPatterns/abstractFactoryPattern';
+import factoryPattern from './designPatterns/creationalPatterns/factorypattern';
+import strategyPattern from './designPatterns/creationalPatterns/strategypattern';
+import singleton from './designPatterns/creationalPatterns/singleTon';
+import builderPattern from './designPatterns/creationalPatterns/builderPattern';
+
 
 @Component({
   selector: 'app-root',
@@ -11,8 +15,15 @@ import factoryPattern from './shareded/factorypattern';
 export class AppComponent {
   title = 'designpatternofoops';
   constructor() {
+    // creational patterns
     // strategyPattern();
+    // factoryPattern()
+    // abstractFactory()
+    // singleton();
+    builderPattern();
+
+    // Behavioural Patterns
     // ObservorPattern();
-    factoryPattern()
+
   }
 }
