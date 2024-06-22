@@ -17,7 +17,6 @@ export class AppComponent {
   title = 'designpatternofoops';
   constructor() {
     // creational patterns
-    // strategyPattern();
     // factoryPattern()
     // abstractFactory()
     // singleton();
@@ -26,6 +25,8 @@ export class AppComponent {
 
     // Behavioural Patterns
     // ObservorPattern();
+    // strategyPattern();
+
 
   }
 }
