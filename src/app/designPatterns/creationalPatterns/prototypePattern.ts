@@ -3,7 +3,7 @@
  * with different types will be cloned.
  */
 class Prototype {
-    public primitive: any;
+    public primitive!: number;
     public component!: object;
     public circularReference!: ComponentWithBackReference;
 
