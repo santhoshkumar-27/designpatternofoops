@@ -68,7 +68,8 @@
               "browserTarget": "designpatternofoops:build:production"
             },
             "development": {
-              "browserTarget": "designpatternofoops:build:development"
+              "browserTarget": "designpatternofoops:build:development",
+              "port": 4203
             }
           },
           "defaultConfiguration": "development"
