@@ -6,6 +6,7 @@ import strategyPattern from './designPatterns/BehaviouralPatterns/strategypatter
 import singleton from './designPatterns/creationalPatterns/singleTon';
 import builderPattern from './designPatterns/creationalPatterns/builderPattern';
 import { protoTypePattern } from './designPatterns/creationalPatterns/prototypePattern';
+import { decoratorPattern } from './designPatterns/StructuralPatterns/decoratorPattern';
 
 
 @Component({
@@ -21,10 +22,11 @@ export class AppComponent {
     // abstractFactory()
     // singleton();
     // builderPattern();
-    protoTypePattern();
+    // protoTypePattern();
 
 
     // Structural pattern
+    decoratorPattern()
 
 
     // Behavioural Patterns
