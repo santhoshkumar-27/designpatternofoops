@@ -7,6 +7,7 @@ import singleton from './designPatterns/creationalPatterns/singleTon';
 import builderPattern from './designPatterns/creationalPatterns/builderPattern';
 import protoTypePattern from './designPatterns/creationalPatterns/prototypePattern';
 import decoratorPattern from './designPatterns/StructuralPatterns/decoratorPattern';
+import adaptorPattern from './designPatterns/StructuralPatterns/adaptorPattern';
 
 
 @Component({
@@ -26,7 +27,8 @@ export class AppComponent {
 
 
     // Structural pattern
-    decoratorPattern()
+    // decoratorPattern()
+    adaptorPattern()
 
 
     // Behavioural Patterns
