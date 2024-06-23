@@ -69,7 +69,7 @@ class ModUpgrade extends WeaponDecorator {
 
 
 
-export function decoratorPattern() {
+export default function decoratorPattern() {
     let sword : Weapon = new Sword();
     sword = new DamageUpgrade(sword);
     // sword = new ModUpgrade(sword);

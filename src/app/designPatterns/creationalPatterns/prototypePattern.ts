@@ -36,7 +36,7 @@ class ComponentWithBackReference {
 /**
  * The client code.
  */
-export function protoTypePattern() {
+export default function protoTypePattern() {
     const p1 = new Prototype();
     p1.primitive = 245;
     p1.component = new Date();

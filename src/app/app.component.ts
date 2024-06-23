@@ -5,8 +5,8 @@ import factoryPattern from './designPatterns/creationalPatterns/factorypattern';
 import strategyPattern from './designPatterns/BehaviouralPatterns/strategypattern';
 import singleton from './designPatterns/creationalPatterns/singleTon';
 import builderPattern from './designPatterns/creationalPatterns/builderPattern';
-import { protoTypePattern } from './designPatterns/creationalPatterns/prototypePattern';
-import { decoratorPattern } from './designPatterns/StructuralPatterns/decoratorPattern';
+import protoTypePattern from './designPatterns/creationalPatterns/prototypePattern';
+import decoratorPattern from './designPatterns/StructuralPatterns/decoratorPattern';
 
 
 @Component({
